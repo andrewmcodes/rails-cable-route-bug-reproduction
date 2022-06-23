@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "pages#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/cable-hyphenated-slug", to: "pages#index"
+  get "/cable_underscored_slug", to: "pages#index"
+  get "/cable_mixed-slug", to: "pages#index"
 end

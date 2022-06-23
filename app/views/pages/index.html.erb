@@ -1,0 +1,33 @@
+<h1>PagesController#index</h1>
+
+<nav>
+  <ul>
+    <li>
+      <%= link_to "root", root_path %>
+    </li>
+    <li>
+      This link
+      <strong>will 404</strong>:
+      <%= link_to cable_hyphenated_slug_path, cable_hyphenated_slug_path %>
+    </li>
+    <li>
+      This link
+      <strong>will not 404</strong>:
+      <%= link_to cable_underscored_slug_path, cable_underscored_slug_path %>
+    </li>
+    <li>
+      This link
+      <strong>will not 404</strong>:
+      <%= link_to cable_mixed_slug_path, cable_mixed_slug_path %>
+    </li>
+  </ul>
+</nav>
+
+<hr>
+
+<dl>
+  <dt>Request:</dt>
+  <dd><code><%= request.inspect %></code></dd>
+  <dt>Referer:</dt>
+  <dd><code><%= request.referer %></code></dd>
+</dl>
