@@ -6,13 +6,13 @@ Navigating to a route prefixed with `#{Rails.application.config.action_cable.mou
 
 I discovered this in a Rails 6 application and confirmed the behavior exists on the latest version. It's possible this is expected and I couldn't find that documentation but the behavior is odd enough that I believe this is a bug.
 
-I tried to provide as much info as possible and have provided a reproduction repo and reproduction instructions. If I can provide anything else, let me know!
+I tried to provide as much info as possible and have [provided a reproduction repo](https://github.com/andrewmcodes/rails-cable-route-bug-reproduction) and reproduction instructions below. If I can provide anything else, let me know!
 
 If this is a bug, I would be happy to take a stab at fixing it if someone can give me a nudge in the right direction.
 
 ### Steps to reproduce
 
-1. Generate new rails app (`rails new test-app && cd test-app`) or use the one [here](#).
+1. Generate new rails app (`rails new test-app && cd test-app`) or use the one [here](https://github.com/andrewmcodes/rails-cable-route-bug-reproduction).
 2. `bin/rails g controller Test index`
 3. Add these routes to your `config/routes.rb`:
     ```rb
