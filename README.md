@@ -47,13 +47,19 @@ In the example above, `/cable-hypenated-slug` should be routed to `test#index` l
 
 Navigating to a route that is prefixed with `#{Rails.application.config.action_cable.mount_path}-` 404s but navigating to a route that is prefixed with `#{Rails.application.config.action_cable.mount_path}_` works.
 
-The same is true regardless of the mount path.
+```rb
+# http://localhost:3000/cable-hypenated-slug -> 404
+# http://localhost:3000/cable_underscored_slug -> 200
+```
+
+```
+The same is true regardless of the mount path:
 
 ```rb
 config.action_cable.mount_path = "/dev/cable"
 
 # http://localhost:3000/dev/cable-hyphenated-slug -> 404
-# http://localhost:3000/dev/cable_underscored_slug -> 201
+# http://localhost:3000/dev/cable_underscored_slug -> 200
 ```
 
 According to the logs, it looks like Rails tries to split the path on the first hyphen and then try to GET it as a WebSocket request:

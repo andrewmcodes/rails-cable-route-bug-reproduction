@@ -3,7 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
 
   # Changing the mount path for Action Cable creates the following behavior:
-  # http://localhost:3000/cable-hyphenated-slug -> 201
+  # http://localhost:3000/cable-hyphenated-slug -> 200
   # http://localhost:3000/dev/cable-hyphenated-slug -> 404
   # config.action_cable.mount_path = "/dev/cable"
 
