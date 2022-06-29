@@ -52,7 +52,6 @@ Navigating to a route that is prefixed with `#{Rails.application.config.action_c
 # http://localhost:3000/cable_underscored_slug -> 200
 ```
 
-```
 The same is true regardless of the mount path:
 
 ```rb
